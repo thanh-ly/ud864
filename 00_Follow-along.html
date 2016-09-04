@@ -33,7 +33,8 @@
         });
         //adds infoWindow
         var infowindow = new google.maps.InfoWindow ({
-          content: 'informatiiiooon windowwwwwwwww'
+          //adds location in LatLng concatenated with text content
+          content: 'informatiiiooon windowwwwwwwww ' + marker.position.toString(),
         });
         marker.addListener('click', function () {
           infowindow.open(map, marker);
