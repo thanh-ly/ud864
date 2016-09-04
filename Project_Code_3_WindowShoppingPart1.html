@@ -42,6 +42,7 @@
         ];
 
         var largeInfowindow = new google.maps.InfoWindow();
+        //creates a new lati and longi bound, captures southwest and northeast corners of the viewport
         var bounds = new google.maps.LatLngBounds();
 
         // The following group uses the location array to create an array of markers on initialize.
@@ -65,7 +66,7 @@
           });
           bounds.extend(markers[i].position);
         }
-        // Extend the boundaries of the map for each marker
+        // Extend the boundaries of the map for each marker. tells map to fit itself to those bounds.
         map.fitBounds(bounds);
       }
 
@@ -87,7 +88,7 @@
     </script>
 
     <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=MYAPIKEY&v=3&callback=initMap">
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5lZuDYSL_VDSY4hBL2uWPnz9yg0PKtVI&v=3&callback=initMap">
     </script>
 
   </body>
